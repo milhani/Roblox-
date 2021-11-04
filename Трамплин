@@ -1,0 +1,2 @@
+local tramp = script.Parent
+tramp.Velocity = Vector3.new(0, 100, 0)
