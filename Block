@@ -1,0 +1,6 @@
+block = Instance.new("Part", workspace)
+block.Size = Vector3.new(50, 50, 50)
+block.Position = Vector3.new(0, 250, 0)
+block.BrickColor = BrickColor.Random()
+block.Anchord = true
+block.Reflectance = 1
