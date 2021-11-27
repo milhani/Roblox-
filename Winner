@@ -1,0 +1,7 @@
+Button = script.Parent
+Winner = Instance.new("Message", workspace)
+Button.Touched:connect(function(hit) 
+    Winner.Text = "Игра окончена"
+    wait(5)
+    Winner:remove(5)
+end)
