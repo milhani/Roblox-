@@ -1,0 +1,5 @@
+player = game.Players.LocalPlayer
+frame = player.PlayerGui:FindFirstChild('ScreenGui').Frame
+script.Parent.MouseButton1Click:Connect(function()
+	frame.Visible = not frame .Visible
+end)
