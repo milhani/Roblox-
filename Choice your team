@@ -1,0 +1,5 @@
+local player = game.Players.LocalPlayer
+script.Parent.MouseButton1Click:Connect(function()
+	player.TeamColor = BrickColor.new("Really red")
+	player:LoadCharacter()
+end)
