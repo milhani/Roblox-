@@ -1,0 +1,18 @@
+Sound = script.Parent.Sound
+Image = script.Parent.ScreenGui
+Ready = true
+function onTouch(t)
+	local a = t.Parent:FindFirstChild("Humanoid")
+	if a ~= nil and Ready == true then
+		Ready = false
+		local b = Image:Clone()
+		local player = game.Players:FindFirstChild(a.Parent.Name)
+		b.Parent = player.PlayerGui
+		script.Parent.Sound:Play()
+		wait(2)
+		b:remove()
+		wait(1)
+		Ready = true
+	end
+end
+script.Parent.Touched:Connect(onTouch)
