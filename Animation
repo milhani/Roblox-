@@ -1,0 +1,25 @@
+local t1  = script.Parent.tel1
+local t2 = script.Parent.tel2
+local flag = false
+
+t1.Touched:Connect(function(touched)
+	if touched.Parent:FindFirstChild("Humanoid") and flag == false then
+		local par = touched.Parent
+		local humroot = par.HumanoidRootPart
+		humroot.Position = t2.Position
+		flag = true
+		wait(3)
+		flag = false
+	end
+end)
+
+t2.Touched:Connect(function(touched)
+	if touched.Parent:FindFirstChild("Humanoid") and flag == false then
+		local par = touched.Parent
+		local humroot = par.HumanoidRootPart
+		humroot.Position = t1.Position
+		flag = true
+		wait(3)
+		flag = false
+	end
+end)
