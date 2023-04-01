@@ -1,0 +1,23 @@
+#Script to ServerScriptService
+function Leaderboard(pl)
+     local folder = Instance.new("Folder", pl)
+     folder.Name = "leaderstats"
+     local points = Instance.new("IntValue", folder)
+     points.Name = "Coins"
+     points.Value = 0
+end
+game.Players.PlayerAdded:Connect(Leaderboard)
+
+#Script to NPC
+local Humanoid = script.Parent.Humanoid
+function Frag()
+ local Val = Humanoid:FindFirstChild("creator") and Humanoid.creator.Value
+        if Val then
+     local leaderstats = Val:FindFirstChild("leaderstats")
+    leaderstats.Coins.Value = leaderstats.Coins.Value + 10 -- стоимость фрага
+  script:Remove()
+   end
+end
+Humanoid.Died:connect(Frag)
+
+#https://youtu.be/jzKNJAu-2Bk
