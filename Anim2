@@ -1,0 +1,35 @@
+local shockButton = workspace.ShockButton.Button
+local proximityPrompt = shockButton.ProximityPrompt
+local shockParticle = shockButton.ExplosionParticle
+
+local shockAnimation = Instance.new("Animation")
+shockAnimation.AnimationId = "rbxassetid://3716468774"
+
+local function onShockTrigger(player)
+
+end
+
+local shockAnimation = Instance.new("Animation")
+shockAnimation.AnimationId = "rbxassetid://3716468774"
+
+local shockAnimationTrack = Animator:LoadAnimation(shockAnimation)
+
+local shockAnimation = Instance.new("Animation")
+shockAnimation.AnimationId = "rbxassetid://3716468774"
+
+local shockAnimationTrack = Animator:LoadAnimation(shockAnimation)
+shockAnimationTrack.Priority = Enum.AnimationPriority.Action
+shockAnimationTrack.Looped = false
+
+local function onShockTrigger(player)
+    shockParticle:Emit(100)
+
+    shockAnimationTrack:Play()
+end
+
+local function onShockTrigger(player)
+    shockParticle:Emit(100)
+
+    shockAnimationTrack:Play()
+    humanoid.WalkSpeed = 0
+end
